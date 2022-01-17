@@ -9,11 +9,11 @@ const useStyles = makeStyles({
  },
 regionTop: {
 	height: '50%',
-    backgroundImage: 'linear-gradient(145deg, white 40%, #ffcc33 40% 60%, #333333 40%)',
+    backgroundImage: 'linear-gradient(140deg, white 28%, #ffcc33 28% 55%, #333333 45%)',
 },
 regionBottom: {
 	height: '50%',
-    backgroundImage: 'linear-gradient(35deg, white 40%, #ffcc33 40% 60%, #333333 40%)',
+    backgroundImage: 'linear-gradient(40deg, white 28%, #ffcc33 28% 55%, #333333 45%)',
 },
 dot: {
 	height: 30,

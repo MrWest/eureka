@@ -6,6 +6,7 @@ const useStyles = makeStyles(theme => ({
     content: {
         width: 1224,
         [theme.breakpoints.up('lg')]: {
+            // border: '1px solid red'
         },
         [theme.breakpoints.down('md')]: {
             width: '100%'
