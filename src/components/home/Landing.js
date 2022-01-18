@@ -4,6 +4,7 @@ import ContentContainer from "./ContentContaier";
 import BackgroundContainer from "./BackgroundContainer";
 import { Grid } from "@mui/material";
 import Content from "./Content";
+import Image from "next/image";
 
 const subtile = {
     color: '#ffffff',
@@ -13,18 +14,6 @@ const subtile = {
 };
 
 const useStyles = makeStyles({
- container: {
-     height: 660,
-     position: 'relative'
- },
-regionTop: {
-	height: '50%',
-    backgroundImage: 'linear-gradient(140deg, white 28%, #ffcc33 28% 55%, #333333 45%)',
-},
-regionBottom: {
-	height: '50%',
-    backgroundImage: 'linear-gradient(40deg, white 28%, #ffcc33 28% 55%, #333333 45%)',
-},
 dot: {
 	height: 30,
     width: 30,
@@ -37,7 +26,8 @@ title: {
     width: 760,
     marginRight: 200,
     marginLeft: 65,
-    marginBottom: 32
+    marginBottom: 32,
+    position: 'relative'
 },
 primarySubtile: {
     ...subtile,
@@ -53,11 +43,7 @@ const Landing = () => {
 const classes = useStyles();
 return (
     <ContentContainer>
-        <div className={classes.container}>
-            <BackgroundContainer>
-                <div className={classes.regionTop} />
-                <div className={classes.regionBottom} />
-            </BackgroundContainer>
+            <BackgroundContainer bgSettings="white 28%, #ffcc33 28% 55%, #333333 45%" />
             <Content>
                 <Grid item>
                   <Grid container alignItems="center" justifyContent="center">
@@ -68,12 +54,13 @@ return (
                         </div>
                       </Grid>
                        <Grid item>
-                           <img src="/images/home/eureka.png" alt="Eureka" className={classes.title} />
+                           <div className={classes.title}>
+                            <Image src="/images/home/eureka.png" alt="Eureka" layout="fill" />
+                           </div>
                        </Grid>
                   </Grid>
                 </Grid>
             </Content>
-        </div>
     </ContentContainer>
 );
 };

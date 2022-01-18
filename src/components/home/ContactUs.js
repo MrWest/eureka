@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from '@mui/styles';
 import ContentContainer from "./ContentContaier";
+import BackgroundContainer from "./BackgroundContainer";
 
 const useStyles = makeStyles({
  container: {
@@ -40,16 +41,10 @@ const ContactUs = () => {
 const classes = useStyles();
 return (
     <ContentContainer>
-        <div className={classes.container}>
-            <div className={classes.primaryRegion}>
-                <div className={classes.regionTop} />
-                <div className={classes.regionBottom} />
-            </div>
-            <div className={classes.secondaryRegion}>
-                <div className={classes.secondaryRegionTop} />
-                <div className={classes.secondaryRegionBottom} />
-            </div>
-        </div>
+        <BackgroundContainer bgSettings="transparent 52.2%, #ffcc33 52% 79.2%, #333333 28%" inverse/>
+        {/* <div className={classes.secondaryRegion}>
+            <BackgroundContainer bgSettings="transparent 55.2%, #ffcc33 54% 82.2%, #333333 28%"/>
+        </div> */}
     </ContentContainer>
 );
 };
