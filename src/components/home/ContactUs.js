@@ -5,8 +5,7 @@ import ContentContainer from "./ContentContaier";
 const useStyles = makeStyles({
  container: {
      height: 660,
-     position: 'relative',
-     overflow: 'hidden'
+     position: 'relative'
  },
  primaryRegion: {
 	height: '100%'
@@ -28,19 +27,12 @@ secondaryRegionBottom: {
     backgroundImage: 'linear-gradient(40deg, transparent 55.2%, #ffcc33 54% 82.2%, #333333 28%)',
 },
 secondaryRegion: {
-    top: '15%',
+    top: '18%',
     left: '-30%',
     zIndex: -1,
     width: '100%',
     position: 'absolute',
     height: '80vh'
-},
-title: {
-    fontSize: 132,
-    position: 'absolute',
-    left: '28%',
-    top: 'calc(50% - 182px)',
-    color: '#336699'
 }
 });
 

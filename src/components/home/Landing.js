@@ -21,7 +21,7 @@ dot: {
     borderRadius: '50%',
     background: '#333333',
     position: 'absolute',
-    left: '20%',
+    left: '12%',
     top: 'calc(50% - 15px)'
 },
 title: {
