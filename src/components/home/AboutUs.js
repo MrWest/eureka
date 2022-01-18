@@ -4,16 +4,20 @@ import ContentContainer from "./ContentContaier";
 
 const useStyles = makeStyles({
  container: {
-     height: '80vh',
-     position: 'relative'
+     height: 660,
+     position: 'relative',
+     backgroundImage: 'url(/images/home/eco-hand.png)',
+     backgroundSize: "contain",
+     backgroundPosition: "bottom right",
+     backgroundRepeat: 'no-repeat'
  },
 regionTop: {
 	height: '50%',
-    backgroundImage: 'linear-gradient(40deg, white 40% 79.3%, #666666 40%)',
+    backgroundImage: 'linear-gradient(40deg, transparent 40% 79.3%, rgba(112, 112, 112, 0.5) 40%)',
 },
 regionBottom: {
 	height: '50%',
-    backgroundImage: 'linear-gradient(140deg, white  40% 79.3%, #666666 40%)',
+    backgroundImage: 'linear-gradient(140deg, white 52.3%, transparent  40% 79.3%, rgba(112, 112, 112, 0.5)   40%)',
 },
 dot: {
 	height: 30,

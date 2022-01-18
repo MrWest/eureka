@@ -4,11 +4,11 @@ import ContentContainer from "./ContentContaier";
 
 const useStyles = makeStyles({
  container: {
-     height: '80vh',
+     height: 660,
      position: 'relative',
-     backgroundImage: 'url(/images/services-bg.png)',
+     backgroundImage: 'url(/images/home/blue-office.png)',
      backgroundSize: "contain",
-     backgroundPosition: "top-left",   
+     backgroundPosition: "top left"   
  },
 regionTop: {
 	height: '50%',
@@ -17,22 +17,6 @@ regionTop: {
 regionBottom: {
 	height: '50%',
     backgroundImage: 'linear-gradient(40deg, white 28%, transparent 28% 55%, #333333 45%)',
-},
-dot: {
-	height: 30,
-    width: 30,
-    borderRadius: '50%',
-    background: '#333333',
-    position: 'absolute',
-    left: '20%',
-    top: 'calc(50% - 15px)'
-},
-title: {
-    fontSize: 132,
-    position: 'absolute',
-    left: '28%',
-    top: 'calc(50% - 182px)',
-    color: '#336699'
 }
 });
 

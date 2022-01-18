@@ -4,7 +4,7 @@ import ContentContainer from "./ContentContaier";
 
 const useStyles = makeStyles({
  container: {
-     height: '80vh',
+     height: 660,
      position: 'relative'
  },
 regionTop: {
