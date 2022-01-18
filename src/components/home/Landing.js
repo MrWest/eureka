@@ -1,6 +1,16 @@
 import React from "react";
 import { makeStyles } from '@mui/styles';
 import ContentContainer from "./ContentContaier";
+import BackgroundContainer from "./BackgroundContainer";
+import { Grid } from "@mui/material";
+import Content from "./Content";
+
+const subtile = {
+    color: '#ffffff',
+    fontSize: 32,
+    width: 420,
+    margin: 0
+};
 
 const useStyles = makeStyles({
  container: {
@@ -20,16 +30,22 @@ dot: {
     width: 30,
     borderRadius: '50%',
     background: '#333333',
-    position: 'absolute',
-    left: '12%',
-    top: 'calc(50% - 15px)'
+    position: 'relative'
 },
 title: {
-    fontSize: 132,
-    position: 'absolute',
-    left: '28%',
-    top: 'calc(50% - 182px)',
-    color: '#336699'
+    height: 240,
+    width: 760,
+    marginRight: 200,
+    marginLeft: 65,
+    marginBottom: 32
+},
+primarySubtile: {
+    ...subtile,
+    transform: 'rotate(-40deg) translateX(180px)  translateY(-130px)'
+},
+secondSubtile: {
+    ...subtile,
+    transform: 'rotate(40deg) translateX(180px)  translateY(90px)'
 }
 });
 
@@ -38,10 +54,25 @@ const classes = useStyles();
 return (
     <ContentContainer>
         <div className={classes.container}>
-            <div className={classes.regionTop} />
-            <div className={classes.regionBottom} />
-            <div className={classes.dot} />
-            <h1 className={classes.title}>Eureka</h1>
+            <BackgroundContainer>
+                <div className={classes.regionTop} />
+                <div className={classes.regionBottom} />
+            </BackgroundContainer>
+            <Content>
+                <Grid item>
+                  <Grid container alignItems="center" justifyContent="center">
+                      <Grid item>
+                        <div className={classes.dot}>
+                            <h4 className={classes.primarySubtile}>Consultoria a Inversiones</h4>
+                            <h4 className={classes.secondSubtile}>Ingenieria y Diseño</h4>
+                        </div>
+                      </Grid>
+                       <Grid item>
+                           <img src="/images/home/eureka.png" alt="Eureka" className={classes.title} />
+                       </Grid>
+                  </Grid>
+                </Grid>
+            </Content>
         </div>
     </ContentContainer>
 );
