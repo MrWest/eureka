@@ -14,6 +14,12 @@ const theme = createTheme({
       main: red.A400,
     },
   },
+  transitions: {
+    easing: {
+      easeOut: "cubic-bezier(.8, 1.5, 0, 1)",
+      sharp: "linear"
+    }
+  }
 });
 
 export default theme;
