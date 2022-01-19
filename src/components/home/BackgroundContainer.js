@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
  container: {
-     height: 660,
+     height: '100%',
      width: '100%',
      position: 'absolute'
  },

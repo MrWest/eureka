@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from '@mui/styles';
-import ContentContainer from "./ContentContaier";
+import ContentContainer from "../ContentContainer";
 import BackgroundContainer from "./BackgroundContainer";
 import { Grid } from "@mui/material";
 import Content from "./Content";

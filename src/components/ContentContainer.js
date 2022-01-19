@@ -21,12 +21,13 @@ const useStyles = makeStyles(theme => ({
         backgroundRepeat: 'no-repeat'
     },
     section: {
+        position: ({ position }) => position
         // backgroundImage: ({ fullWhite }) => fullWhite ? console.log('xxx: ', fullWhite) : 'linear-gradient(90deg, transparent 0% 70%, #333333 30%)'
     }
 }));
 
-const ContentContainer = ({ children, fullWhite, background, right }) => {
-const classes = useStyles({ fullWhite, background, right });
+const ContentContainer = ({ children, fullWhite, background, right, position }) => {
+const classes = useStyles({ fullWhite, background, right, position });
     return (
         <Grid container justifyContent="center" className={classes.section}>
             <Grid item>
