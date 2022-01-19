@@ -35,7 +35,7 @@ primarySubtile: {
 },
 secondSubtile: {
     ...subtile,
-    transform: 'rotate(40deg) translateX(180px)  translateY(90px)'
+    transform: 'rotate(40deg) translateX(180px)  translateY(85px)'
 }
 });
 

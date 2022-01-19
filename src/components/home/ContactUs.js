@@ -42,9 +42,9 @@ const classes = useStyles();
 return (
     <ContentContainer>
         <BackgroundContainer bgSettings="transparent 52.2%, #ffcc33 52% 79.2%, #333333 28%" inverse/>
-        {/* <div className={classes.secondaryRegion}>
+        <div className={classes.secondaryRegion}>
             <BackgroundContainer bgSettings="transparent 55.2%, #ffcc33 54% 82.2%, #333333 28%"/>
-        </div> */}
+        </div>
     </ContentContainer>
 );
 };
