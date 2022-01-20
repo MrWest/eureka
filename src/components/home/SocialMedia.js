@@ -2,6 +2,9 @@ import React from "react";
 import { makeStyles } from '@mui/styles';
 import ContentContainer from "../ContentContainer";
 import BackgroundContainer from "./BackgroundContainer";
+import Google from '@mui/icons-material/Google';
+import Facebook from '@mui/icons-material/Facebook';
+import LinkedIn from '@mui/icons-material/LinkedIn';
 import Content from "./Content";
 import { Grid } from "@mui/material";
 import { generatedLines } from "../../utils/commonFunctions";
@@ -34,15 +37,21 @@ const useStyles = makeStyles(theme => ({
         fontSize: 32,
         textAlign: 'center',
         zIndex: 1,
+        margin: 0,
         marginBottom: 12
     },
     bottomSubTitle: {
-
         color: theme.palette.primary.main,
         fontSize: 32,
         textAlign: 'center',
         margin: 0,
         zIndex: 1
+    },
+    socialMediaIcon: {
+        fontSize: 72,
+        color: '#ffffff',
+        margin: 32,
+        marginTop: 10
     }
 }));
 
@@ -70,6 +79,11 @@ return (
                         </Grid>
                     <h2 className={classes.bottomTitle}>Empresa de Ingenieria, Diseno y Consultoria a Inversiones</h2>
                     <h4 className={classes.bottomSubTitle}>una idea, un sueno, una realidad</h4>
+                    <Grid container justifyContent="center" style={{ zIndex: 3 }}>
+                        <Grid item><LinkedIn className={classes.socialMediaIcon} /></Grid>
+                        <Grid item><Facebook  className={classes.socialMediaIcon} /></Grid>
+                        <Grid item><Google  className={classes.socialMediaIcon} /></Grid>
+                    </Grid>
                     </Grid>
                 </Grid>
             </Grid>
