@@ -69,7 +69,7 @@ const menuLinks = [
 ]
 
 const Menu = () => {
-const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+const [isMenuOpen, setIsMenuOpen] = React.useState(true);
 const containerRef = React.useRef(null);
 // const location = useLocation();
 
