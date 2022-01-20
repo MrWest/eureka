@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     },
     bottomSubTitle: {
         color: theme.palette.primary.main,
-        fontSize: 32,
+        fontSize: 24,
         textAlign: 'center',
         margin: 0,
         zIndex: 1
@@ -77,13 +77,15 @@ return (
                                 <Image src="/images/home/eureka.png" alt="Eureka" layout="fill" />
                             </div>
                         </Grid>
-                    <h2 className={classes.bottomTitle}>Empresa de Ingenieria, Diseno y Consultoria a Inversiones</h2>
-                    <h4 className={classes.bottomSubTitle}>una idea, un sueno, una realidad</h4>
-                    <Grid container justifyContent="center" style={{ zIndex: 3 }}>
-                        <Grid item><LinkedIn className={classes.socialMediaIcon} /></Grid>
-                        <Grid item><Facebook  className={classes.socialMediaIcon} /></Grid>
-                        <Grid item><Google  className={classes.socialMediaIcon} /></Grid>
-                    </Grid>
+                        <div style={{ zIndex: 3 }}>
+                            <h2 className={classes.bottomTitle}>Empresa de Ingenieria, Diseno y Consultoria a Inversiones</h2>
+                            <h4 className={classes.bottomSubTitle}>una idea, un sueno, una realidad</h4>
+                            <Grid container justifyContent="center">
+                                <Grid item><LinkedIn className={classes.socialMediaIcon} /></Grid>
+                                <Grid item><Facebook  className={classes.socialMediaIcon} /></Grid>
+                                <Grid item><Google  className={classes.socialMediaIcon} /></Grid>
+                            </Grid>
+                        </div>
                     </Grid>
                 </Grid>
             </Grid>
