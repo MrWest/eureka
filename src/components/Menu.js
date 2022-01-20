@@ -108,7 +108,7 @@ const classes = useStyles();
                                                     to={link.url}
                                                     spy={true}
                                                     smooth={true}
-                                                    offset={0}
+                                                    offset={-170}
                                                     duration={500}
                                                     >
                                                         <div className={classes.linkButton}>{link.name}</div>
