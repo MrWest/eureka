@@ -42,7 +42,7 @@ secondSubtile: {
 const Landing = () => {
 const classes = useStyles();
 return (
-    <ContentContainer>
+    <ContentContainer ident="landing">
             <BackgroundContainer bgSettings="white 28%, #ffcc33 28% 55%, #333333 45%" />
             <Content>
                 <Grid item>

@@ -62,7 +62,7 @@ return (
     <ContentContainer>
         <BackgroundContainer bgSettings="transparent 22.5%, #666666 20% 44.2%, #333333 40%" single />
         <Content>
-            <Grid container justifyContent="center" style={{ height: '100%' }}>
+            <Grid id="contact-us" container justifyContent="center" style={{ height: '100%' }}>
                 <Grid item>
                     <div className={classes.containerLeft}>
                         <div className={classes.paragraph}>

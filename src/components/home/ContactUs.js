@@ -50,7 +50,7 @@ const ContactUs = () => {
 const classes = useStyles();
 const paragraph = (text, dir) => (<div className={classes.paragraph}>{generatedLines(text).map(line => (<p key={line} className={dir === 'right' ? classes.contentRight : classes.contentLeft}><span>{line}</span></p>))}</div>);
 return (
-    <ContentContainer>
+    <ContentContainer ident="team">
         <BackgroundContainer bgSettings="transparent 52.2%, #ffcc33 52% 79.2%, #333333 28%" inverse/>
         <div style={{ position: 'relative' }}>
             <div className={classes.secondaryRegion}>
@@ -58,7 +58,7 @@ return (
             </div>
         </div>
         <Content>
-            <Grid container justifyContent="right" className={classes.wrapper}>
+            <Grid  container justifyContent="right" className={classes.wrapper}>
                 <Grid item xs={6}>
                     <div className={classes.containerRight}>
                         <h4 className={classes.titleRight}>Nuestro Equipo</h4>

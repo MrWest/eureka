@@ -26,10 +26,10 @@ const ServiceItem = ({ classes, title, content }) => (
 const Services = () => {
 const classes = useStyles();
 return (
-    <ContentContainer background="url(/images/home/blue-office.png)">
+    <ContentContainer background="url(/images/home/blue-office.png)"  ident="services">
         <BackgroundContainer bgSettings="white 28%, transparent 28% 55%, #333333 45%" />
         <Content>
-            <Grid id="services" container justifyContent="right" className={classes.servicesSection}>
+            <Grid container justifyContent="right" className={classes.servicesSection}>
                 <Grid xs={6}>
                     <Carousel>
                         <ServiceItem
