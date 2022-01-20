@@ -26,10 +26,10 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const ContentContainer = ({ children, fullWhite, background, right, position }) => {
+const ContentContainer = ({ children, fullWhite, background, right, position, ident }) => {
 const classes = useStyles({ fullWhite, background, right, position });
     return (
-        <Grid container justifyContent="center" className={classes.section}>
+        <Grid id={ident} container justifyContent="center" className={classes.section}>
             <Grid item>
                 <div className={classes.content}>
                     <div className={classes.container}>

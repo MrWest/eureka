@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 const AboutUs = () => {
 const classes = useStyles();
 return (
-    <ContentContainer background="url(/images/home/eco-hand.png)" right>
+    <ContentContainer background="url(/images/home/eco-hand.png)" right ident="eureka">
         <BackgroundContainer bgSettings="transparent 40% 79.3%, rgba(112, 112, 112, 0.5) 40%" inverse/>
         <Content>
             <Grid container style={{ height: '100%' }}>
