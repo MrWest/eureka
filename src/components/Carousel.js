@@ -1,8 +1,7 @@
 import React from "react";
 import { Button, Collapse, Grid, IconButton, Link, Slide } from "@mui/material";
-import ArrowBack from '@mui/icons-material/ArrowBack';
-import ArrowForward from '@mui/icons-material/ArrowForward';
-import ContentContainer from "./ContentContainer";
+import ArrowBack from '@mui/icons-material/ArrowBackIos';
+import ArrowForward from '@mui/icons-material/ArrowForwardIos';
 import { makeStyles, useTheme } from "@mui/styles";
 import { useLocation } from "react-router-dom";
 import SwipeableViews from "react-swipeable-views/lib/SwipeableViews";
@@ -15,13 +14,9 @@ const useStyles = makeStyles(theme => ({
         zIndex: 3
     },
     linkButton: { 
-        width: '100%',
-        textAlign: 'left',
-        paddingRight: 24,
-        textTransform: 'none',
-        paddingLeft: 0,
-        color: 'white',
-        '&:hover': { color: theme.palette.primary.main }
+        color: theme.palette.primary.main,
+        '&:hover': { color: 'white' },
+        '&:disabled': { color: theme.palette.secondary.main }
     },
     menuOpenerWrapper: { position: 'relative', width: 16 },
     menuOpener: {  
@@ -102,13 +97,13 @@ if(views.length === 0) return null;
     return (
         <Grid container alignItems="center">
             <Grid item xs={2}>
-                <IconButton onClick={handlePrevious}>
+                <IconButton disabled={index === 0} className={classes.linkButton} onClick={handlePrevious}>
                     <ArrowBack />
                 </IconButton>
             </Grid>
             <Grid item xs ref={containerRef}>
             <SwipeableViews
-                // axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                axis={'x'}
                 index={index}
                 onChangeIndex={handleChangeIndex}
             >
@@ -120,7 +115,7 @@ if(views.length === 0) return null;
           </SwipeableViews>
             </Grid>
             <Grid item xs={2}>
-                <IconButton onClick={handleNext}>
+                <IconButton  disabled={index === views.length - 1} className={classes.linkButton} onClick={handleNext}>
                     <ArrowForward />
                 </IconButton>
             </Grid>

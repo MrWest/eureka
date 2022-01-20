@@ -10,7 +10,18 @@ const useStyles = makeStyles({
     servicesSection: {
         zIndex: 1
      },
+     title: { color: 'white', fontSize: 24, marginTop: 0, marginBottom: 0 },
+     content: { color: 'white', textAlign: 'left' },
+     container: { padding: '10px 20px' }
 });
+
+const ServiceItem = ({ classes, title, content }) => (
+    <div className={classes.container}>
+        <h4 className={classes.title}>{title}</h4>
+        {content.map(c => (<p key={c} className={classes.content}>{c}</p>))}
+        
+    </div>
+);
 
 const Services = () => {
 const classes = useStyles();
@@ -21,9 +32,16 @@ return (
             <Grid id="services" container justifyContent="right" className={classes.servicesSection}>
                 <Grid xs={6}>
                     <Carousel>
-                        <h1>jajaja</h1>
-                        <h1>jejeje</h1>
-                        <h1>jojojo</h1>
+                        <ServiceItem
+                            classes={classes}
+                            title="Servicios  Ingenieria y Diseño"
+                            content={["Proyectos de Ingenieria,  Arquitectura, Diseño Industrial y  Diseño Grafico.", "Elaboracion de Presupuestos, cronogramas, Proyectos de Organizacion de Obra,  Plan de Calidad, Proyecto de  Seguridad y Salud en el  Trabajo, entre Otras  documentaciones  de Obra.", "Control de Autor, Certificaciones,  Fiscalizacion de Obras,  Control de Calidad,  y Administracion  de Obras"]}
+                         />
+                         <ServiceItem
+                             classes={classes}
+                             title="Consultoria a Inversionens"
+                             content={["Proyectos de Ingenieria,  Arquitectura, Diseño Industrial y  Diseño Grafico.", "Elaboracion de Presupuestos, cronogramas, Proyectos de Organizacion de Obra,  Plan de Calidad, Proyecto de  Seguridad y Salud en el  Trabajo, entre Otras  documentaciones  de Obra."]}
+                          />
                     </Carousel>
                 </Grid>
             </Grid>
