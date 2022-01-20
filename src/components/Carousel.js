@@ -3,22 +3,15 @@ import { Button, Collapse, Grid, IconButton, Link, Slide } from "@mui/material";
 import ArrowBack from '@mui/icons-material/ArrowBack';
 import ArrowForward from '@mui/icons-material/ArrowForward';
 import ContentContainer from "./ContentContainer";
-import { makeStyles } from "@mui/styles";
+import { makeStyles, useTheme } from "@mui/styles";
 import { useLocation } from "react-router-dom";
+import SwipeableViews from "react-swipeable-views/lib/SwipeableViews";
 
 const useStyles = makeStyles(theme => ({
     menuWrapper: {
        height: '60vh'
     },
-    menuContainer: {
-        padding: '60px 0px',
-        paddingRight: 0,
-        overflow: 'hidden',
-        width: 300,
-        transform: 'translateX(50%)',
-        backgroundImage: 'linear-gradient(90deg, rgba(45, 45, 45, 0.5) 50%, transparent 50%)',
-        borderRadius: '50%',
-        position: 'fixed',
+    viewContainer: {
         zIndex: 3
     },
     linkButton: { 
@@ -60,6 +53,24 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
+function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+  
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`full-width-tabpanel-${index}`}
+        aria-labelledby={`full-width-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <div>{children}</div>
+        )}
+      </div>
+    );
+  };
+
 const Carousel = ({ children }) => {
 const [index, setIndex] = React.useState(0);
 const [views, setViews] = React.useState([]);
@@ -72,28 +83,41 @@ React.useEffect(() => {
 
 const handleNext = () => {
     setDirection('right');
-    setIndex(index < views.length ? index + 1 : 0);
+    setIndex(index < views.length - 1 ? index + 1 : 0);
 };
 
 const handlePrevious = () => {
     setDirection('left');
-    setIndex(index < views.length ? index + 1 : 0);
+    setIndex(index >= 1 ? index - 1 : views.length -1);
 };
+const handleChangeIndex = (index) => {
+    setValue(index);
+  };
+
+const theme = useTheme();
 
 const classes = useStyles();
 
 if(views.length === 0) return null;
     return (
-        <Grid container>
+        <Grid container alignItems="center">
             <Grid item xs={2}>
                 <IconButton onClick={handlePrevious}>
                     <ArrowBack />
                 </IconButton>
             </Grid>
             <Grid item xs ref={containerRef}>
-                <Slide direction={direction} container={containerRef.current}>
-                    {views[index]}
-                </Slide>
+            <SwipeableViews
+                // axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                index={index}
+                onChangeIndex={handleChangeIndex}
+            >
+                {views.map(v => (
+                    <div key={v.name} value={index} index={0} dir={theme.direction}>
+                        {v}
+                    </div>
+                ))}
+          </SwipeableViews>
             </Grid>
             <Grid item xs={2}>
                 <IconButton onClick={handleNext}>
